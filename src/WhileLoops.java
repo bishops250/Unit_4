@@ -18,7 +18,7 @@ String output= "";
         else
             while(num1<num2) {
                 ++num1;
-                 output += num1 + "";
+                 output += num1 + " ";
 
         }
 
@@ -26,14 +26,15 @@ String output= "";
     }
 
     public static String factors(int num) {
-        String output="";
+        String total="";
         int start_num=0;
-        while(start_num<num) {
+        while(start_num<=num) {
+            if(start_num%num ==0)
+            total += num +"";
             start_num++;
-            output += num % start_num;
         }
 
-        return output;
+        return total;
     }
 
     public static String countPosAndNeg() {
@@ -45,30 +46,48 @@ String output= "";
 
 
         while(num1 !=0) {
+
+            if(num1 <0) {
+            negative_num ++;
+            }
+            else {
+                positive_num++;
+            }
+
             System.out.println("Enter a positive or negative number or 0 to quit: ");
             num1=user_input.nextInt();
 
-            if(num1 <0) {
-            positive_num ++;
-            }
-            else {
-                negative_num++;
-            }
         }
         return "There were " + positive_num + " positive and " + negative_num + " negative numbers.";
     }
 
     public static String findMinAndMax(int num1) {
+        int count_num=0;
+        while (count_num<5){
+            System.out.println("Number");
+        }
 return "";
     }
 
 
     public static String gradePoint(int num1, int num2) {
-   return "";
+        Scanner user_input = new Scanner(System.in);
+        int count_num=0;
+        double grade_point_average=0;
+
+        System.out.println("Enter Seven Letter Grades: ");
+        while(count_num<7)
+
+            grade_point_average+=0;
+
+
+
+   return "GPA = " + grade_point_average;
 
     }
 public static void main(String[]args) {
-countPosAndNeg();
+
+System.out.println(fromHereToThere(20,30));
 
 
 
