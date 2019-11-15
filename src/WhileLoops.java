@@ -4,9 +4,6 @@ public class WhileLoops {
 
     static Scanner scan = new Scanner(System.in);
 
-    public static String testing_method() {
-        return "";
-    }
 
     public static String fromHereToThere(int num1, int num2) {
         String output = "";
