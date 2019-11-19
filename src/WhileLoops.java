@@ -56,17 +56,21 @@ public class WhileLoops {
     }
 
     public static String findMindAndMax() {
-        int max_num = Integer.MAX_VALUE;
-        int min_num = Integer.MIN_VALUE;
+        int max_int_num = Integer.MAX_VALUE;
+        int min_int_num = Integer.MIN_VALUE;
+        int max_num= max_int_num;
+        int min_num= min_int_num;
         int count_num = 0;
 
 
         while (count_num < 5) {
             System.out.println("Number:");
             int user_num = scan.nextInt();
+
             if (user_num < max_num) {
                 max_num = user_num;
-            } else if (user_num > min_num) {
+            }
+            else if (user_num > min_num ) {
                 min_num = user_num;
             }
 
@@ -88,7 +92,7 @@ public class WhileLoops {
         while (count_num < 7) {
 
             System.out.println("Enter Seven Letter Grades: ");
-            user_letter = scan.nextLine().toLowerCase();
+            user_letter = scan.next().toLowerCase();
 
             if (user_letter.equals("a")) {
                 grade_point_total += 4;
