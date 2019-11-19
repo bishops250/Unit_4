@@ -56,8 +56,8 @@ public class WhileLoops {
     }
 
     public static String findMindAndMax() {
-        int max_int_num = Integer.MAX_VALUE;
-        int min_int_num = Integer.MIN_VALUE;
+        int max_int_num = Integer.MIN_VALUE;
+        int min_int_num = Integer.MAX_VALUE;
         int max_num= max_int_num;
         int min_num= min_int_num;
         int count_num = 0;
@@ -67,16 +67,16 @@ public class WhileLoops {
             System.out.println("Number:");
             int user_num = scan.nextInt();
 
-            if (user_num < max_num) {
+            if (user_num > max_num) {
                 max_num = user_num;
             }
-            else if (user_num > min_num ) {
+            else if (user_num < min_num ) {
                 min_num = user_num;
             }
 
             count_num++;
         }
-        return "Max Value is: " + max_num + "\nMin Value is: " + min_num;
+        return "Max value is: " + max_num + "\nMin value is: " + min_num;
     }
 
 

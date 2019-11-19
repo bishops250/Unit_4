@@ -13,11 +13,11 @@ public class ForLoops {
     public static String countDown(int start_num, int end_num) {
         String count_down_num = "";
 
-        if (start_num <= end_num) {
+        if (end_num >= start_num) {
 
-            for (int count = start_num; count < end_num; count++) {
+            for (int count = end_num; count > start_num; count--) {
                 count_down_num += end_num + " ";
-                end_num--;
+
             }
         } else {
             return "";
@@ -30,19 +30,17 @@ public class ForLoops {
     public static String countDown2(int start_num, int end_num) {
         String count_down_num = "";
         if (start_num > end_num) {
-            for (int count = end_num; count < start_num; count++) {
+            for (int count = start_num; count < start_num; count--) {
                 count_down_num += start_num + "";
-                end_num--;
             }
         } else if (start_num < end_num) {
             for (int count = start_num; count < end_num; count++) {
-                count_down_num += end_num + "";
-                end_num--;
+                count_down_num += end_num + " ";
+
             }
         } else {
             for (int count = start_num; count < end_num; count++) {
-                count_down_num += end_num + "";
-                end_num--;
+                count_down_num += end_num + " ";
             }
 
 
