@@ -15,13 +15,14 @@ public class ForLoops {
 
         if (end_num >= start_num) {
 
-            for (int count = end_num; count > start_num; count--) {
-                count_down_num += end_num + " ";
+            for (int count = end_num; count >= start_num; count--) {
+                count_down_num += count + " ";
 
             }
         } else {
             return "";
         }
+
         return count_down_num;
 
     }
@@ -40,14 +41,14 @@ public class ForLoops {
 
             }
         } else {
-            for (int count = start_num; count <= end_num; count--) {
+            for (int count = start_num; count >= end_num; count--) {
                 count_down_num += count + " ";
             }
 
 
         }
 
-        return count_down_num;
+        return count_down_num +"";
     }
 
     public static int sumNumbers(int num1, int num2) {
