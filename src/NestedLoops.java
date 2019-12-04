@@ -18,8 +18,8 @@ public class NestedLoops {
 
         String printed_square= "";
 
-        for(int count= 0; count<rec_width_X_length; count++) {
-            for(int count2= 0; count2<rec_width_X_length;count++) {
+        for(int count = 1; count<=rec_width_X_length; ++count) {
+            for(int count2= 1; count2<rec_width_X_length;++count2){
                 printed_square += "X";
             }
             printed_square += "\n";
@@ -27,20 +27,44 @@ public class NestedLoops {
 
         return printed_square;
     }
-    public static String flippedTriangle(int n) {
+    public static String flippedTriangle(int start_num) {
 
-        return "";
+        String printed_flipped_triangle = "";
+
+        for(int count = start_num; count>=1; --count) {
+            for(int count2=count;count2>=1;--count2) {
+                printed_flipped_triangle += "*";
+            }
+            printed_flipped_triangle += "\n";
+        }
+
+        return printed_flipped_triangle;
     }
 
     public static String multiplicationTable() {
 
-        return "";
+        String multiplicationtable= "";
+
+        for(int count=1; count<= 9;count++) {
+            for(int count2= 1; count2<=9; count2++) {
+                if(count * count2<10) {
+                    multiplicationtable+= "  " + count*count2;
+                }
+                else {
+                    multiplicationtable+= " " + count*count2;
+                }
+            }
+            multiplicationtable +=  "\n" ;
+        }
+        return multiplicationtable;
     }
 
 
     public static void main(String[]args) {
 
        //System.out.println(xSquare());
-       System.out.println(xSquare2(8));
+      //System.out.println(xSquare2(4));
+      //System.out.println(flippedTriangle(6));
+        System.out.println(multiplicationTable());
     }
 }
