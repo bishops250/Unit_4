@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class NestedLoops {
 
 
@@ -19,7 +21,7 @@ public class NestedLoops {
         String printed_square= "";
 
         for(int count = 1; count<=rec_width_X_length; ++count) {
-            for(int count2= 1; count2<rec_width_X_length;++count2){
+            for(int count2= 1; count2<=rec_width_X_length;++count2){
                 printed_square += "X";
             }
             printed_square += "\n";
@@ -62,9 +64,12 @@ public class NestedLoops {
 
     public static void main(String[]args) {
 
-       //System.out.println(xSquare());
-      //System.out.println(xSquare2(4));
-      //System.out.println(flippedTriangle(6));
+        Scanner user_input = new Scanner(System.in);
+        int rec_width= user_input.nextInt();
+
+       System.out.println(xSquare());
+        System.out.println(xSquare2(rec_width));
+      System.out.println(flippedTriangle(6));
         System.out.println(multiplicationTable());
     }
 }
