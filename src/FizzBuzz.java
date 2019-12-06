@@ -4,27 +4,30 @@ public class FizzBuzz {
 
     public static String fizzBuzz(int num) {
 
-        String fizzBuzz_print= "";
+        String fizzBuzz_print = "";
 
-            for(int count2= 1; count2<=num; ++count2){
+        for (int count2 = 1; count2 <= num; ++count2) {
 
-                if(count2 % 3!=0 && count2 % 5!=0) {
-                    fizzBuzz_print += count2 + " ";
-                }
-                else if(count2 % 3 == 0 && count2 % 5 !=0) {
-                    fizzBuzz_print += "Fizz ";
-                }
-                else if(count2 % 5 == 0 && count2 % 3 !=0) {
-                    fizzBuzz_print += "Buzz ";
-                }
-                else if(count2 % 5 == 0 && count2 % 3 ==0); {
-                    fizzBuzz_print += "FizzBuzz ";
-                }
-                if(count2 % 20 ==0) {
-                    fizzBuzz_print += "\n";
-                }
+            if (count2 % 5 == 0 && count2 % 3 == 0) {
+                fizzBuzz_print += "FizzBuzz ";
 
             }
+            else if (count2 % 3 == 0 && count2 % 5 != 0) {
+                fizzBuzz_print += "Fizz ";
+            }
+            else if (count2 % 5 == 0 && count2 % 3 != 0) {
+                fizzBuzz_print += "Buzz ";
+            }
+            else if (count2 % 3 != 0 && count2 % 5 != 0) {
+                fizzBuzz_print += count2 + " ";
+
+            }
+            if (count2 % 20 == 0) {
+                fizzBuzz_print += "\n";
+        }
+
+
+    }
         return fizzBuzz_print;
     }
 
